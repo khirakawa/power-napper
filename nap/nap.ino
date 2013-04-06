@@ -8,7 +8,7 @@
 int redPin = 9;
 int bluePin = 10;
 int greenPin = 11;
-int buzzPin = 3;
+int buzzPin = 5;
 int i = 0;
 int UP = 1;
 int wakeUpIn = 10 * 1000; // 10 minutes
