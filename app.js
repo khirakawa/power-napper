@@ -9,7 +9,7 @@ var board = new arduino.Board({
 board.on('ready', function(){
 	console.log("ready");
 
-	var rfReceiver = new arduino.rf.Receiver({
+	var rfReceiver = new arduino.RFReceiver({
 		board: board,
 		pin: '02'
 	});
