@@ -22,9 +22,9 @@ void loop()
   
   if(digitalRead(A5) == LOW){
     Serial.print("BUTTON PRESSED");
-    char *msg = "test";
+    char *msg = "test"; // max 26 characters
     digitalWrite(13, true); // Flash a light to show transmitting
-    vw_send((uint8_t *)msg, strlen(msg));
+    vw_send((uint8_t *)msg, strlen(msg) + 1); // +1 to include null byte
     vw_wait_tx(); // Wait until the whole message is gone
     digitalWrite(13, false);
   }
