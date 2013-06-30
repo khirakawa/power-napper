@@ -15,6 +15,25 @@ board.on('ready', function(){
 	});
 
 	rfReceiver.on('read', function(err, data){
-		console.log("data", data);
+		console.log("receiver data", data);
 	});
+});
+
+var tboard = new arduino.Board({
+	baudrate: 9600,
+	debug: true,
+	device : "usbserial-A601EMRF"
+});
+
+tboard.on('ready', function(){
+	console.log("ready");
+
+	var rfTransmitter = new arduino.RFTransmitter({
+		board: tboard,
+		pin: '06'
+	})
+
+	setInterval(function() {
+	  rfTransmitter.send("hey there");
+	}, 2000);
 });
