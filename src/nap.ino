@@ -5,13 +5,13 @@
 * It's nap time
 */
 
-int redPin = 9;
+int redPin = 11;
 int bluePin = 10;
-int greenPin = 11;
+int greenPin = 9;
 int buzzPin = 5;
 int i = 0;
 int UP = 1;
-int wakeUpIn = 10 * 1000; // 10 minutes
+long wakeUpIn = 600000; // 10 minutes
 int buzzFor = 2 * 1000; // 2 seconds
 int buzzEvent;
 int ledEvent;
